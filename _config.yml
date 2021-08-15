@@ -21,15 +21,17 @@
 title: NextFil Filament Dehydrator
 email: javicarrera@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+#  Write an awesome description for your new site here. You can edit this
+#  line in _config.yml. It will appear in your document head meta (for
+#  Google search results) and in your feed.xml site description.
+   
 baseurl: "NextFil-Documentation" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  javicarrera
 
 # Build settings
 theme: jekyll-theme-minimal
+
 plugins:
   - jekyll-feed
 
@@ -52,3 +54,93 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+
+# Defines the site structure using "collections" that correspond to site sub-folders.
+collections:
+  basics:
+    output: true
+    permalink: /docs/:collection/:path:output_ext
+
+  configuration:
+    output: true
+    title: Configuration
+    permalink: /docs/:collection/:path:output_ext
+
+  settings:
+    output: true
+    title: Settings
+    permalink: /docs/:collection/:path:output_ext
+
+  development:
+    output: true
+    title: Development
+    permalink: /docs/:collection/:path:output_ext
+
+  download:
+    output: true
+    title: Download
+    permalink: /docs/:collection/:path:output_ext
+
+  hardware:
+    output: true
+    title: Hardware
+    permalink: /docs/:collection/:path:output_ext
+
+  meta:
+    output: true
+    permalink: /:collection/:path/
+
+defaults:
+  - # All types
+    scope:
+      path: '' # all files
+    values:
+      layout: 'default'
+      author: 'javicarrera'
+      category: [ 'default' ]
+      show:
+        navbar: true
+        footer: true
+        breadcrumbs: false
+
+  - # Basics collection settings
+    scope:
+      type: 'basics'
+    values:
+      layout: 'docs'
+      category: [ 'Basics' ]
+
+  - # Configuration collection settings
+    scope:
+      type: 'configuration'
+    values:
+      layout: 'docs'
+      category: [ 'configuration' ]
+
+  - # Settings collection settings
+    scope:
+      type: 'settings'
+    values:
+      layout: 'setting'
+      category: [ 'setting' ]
+
+  - # Development collection settings
+    scope:
+      type: 'development'
+    values:
+      layout: 'docs'
+      category: [ 'development' ]
+
+  - # Hardware collection settings
+    scope:
+      type: 'hardware'
+    values:
+      layout: 'docs'
+      category: [ 'hardware' ]
+
+  - # Meta collection settings
+    scope:
+      type: 'meta'
+    values:
+      category: [ 'meta' ]
