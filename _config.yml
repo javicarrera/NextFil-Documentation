@@ -48,11 +48,39 @@ sass:
     style: compressed
 
 # Build settings
-remote_theme: pages-themes/minimal@v0.2.0
+#remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: fongandrew/hydeout
 destination: ./build
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
   - jekyll-remote-theme
+  - jekyll-seo-tag  
+
+# Collections
+# Collections are similar to posts except the content doesn’t have to be grouped by date.
+# Documents (the items in a collection) live in a folder in the root of the site named 
+# _*collection_name*. In this case, _basics.
+collections:
+  basics:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

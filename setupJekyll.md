@@ -1,4 +1,10 @@
-Instalar Ruby, Jekyll
+Instalar Git
+Instalar Ruby
+'ridk install' (1 & 3)
+'gem install jekyll bundler'
+'jekyll -v'
+'chcp 65001'
+
 github:
 1. new repository en GitHub Desktop: nombreDeLaPagina, no _gitignore, no Readme, no Licence.
 
@@ -9,6 +15,7 @@ windows cmd:
 	baseurl: "nombreDeLaPagina"
 3. dentro de la carpeta "nombreDeLaPagina"
 	- 'gem install bundler'
+	- 'gem install jekyll'
 	- 'bundle install'
 	- 'bundle add webrick'
 	- 'bundle exec jekyll serve'
