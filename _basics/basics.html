@@ -1,0 +1,15 @@
+---
+layout: default
+title: Basics
+---
+<h1>Basics</h1>
+
+<ul>
+  {% for basics in site.basics %}
+    <li>
+      <h2>{{ author.name }}</h2>
+      <h3>{{ author.position }}</h3>
+      <p>{{ author.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>
