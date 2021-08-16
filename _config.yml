@@ -32,6 +32,7 @@ repository:
   main: 'https://github.com/javicarrera/NextFil'
   doc: 'https://github.com/javicarrera/NextFil-Documentation'
 encoding: utf-8
+google_analytics: G-ECD7CZ2M9R
 
 markdown: kramdown
 highlighter: rouge
