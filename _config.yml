@@ -36,10 +36,10 @@ repository:
 
 author:
   name: 'Javier Carrera Arias'
-  url:  'https://javicarrera.eu'
+  #url:  'https://javicarrera.eu'
 
 encoding: utf-8
-google_analytics: G-ECD7CZ2M9R
+#google_analytics: G-ECD7CZ2M9R
 
 
 # Dependencies
